@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const GifExpertApp = () => {
   return (
-    <><h1>GifExpertApp</h1></>
-  )
-}
+    <>
+      <h1>GifExpertApp</h1>
+    </>
+  );
+};
