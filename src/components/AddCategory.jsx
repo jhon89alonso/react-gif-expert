@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onInputChange = ({ target }) => {
@@ -9,15 +9,16 @@ export const AddCategory = ({ setCategories }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(inputValue);
+    //console.log(inputValue);
     //setCategories([inputValue]);
     if (inputValue.trim().length <= 1) return;
-    setCategories((categories) => [inputValue, ...categories]);
-    setInputValue('')
+    onNewCategory(inputValue.trim());
+    //setCategories((categories) => [inputValue, ...categories]);
+    setInputValue("");
   };
 
   return (
-    <form onSubmit={ onSubmit}>
+    <form onSubmit={onSubmit}>
       <input
         type="text"
         placeholder="Buscar gifts"
