@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GiftGrid } from "./components/GiftGrid";
 
 export const GifExpertApp = () => {
   const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
@@ -14,7 +15,7 @@ export const GifExpertApp = () => {
     //setCategories(cat =>[...categories, "Gate"]);
   };
 
-  console.log(categories);
+  //console.log(categories);
   return (
     <>
       <h1>GifExpertApp</h1>
@@ -25,11 +26,13 @@ export const GifExpertApp = () => {
 
       {/* <button onClick={onAddCategory}>Agregar</button> */}
 
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+      {categories.map((category) => (
+        // <div key={category}>
+        //   <h3>{category}</h3>
+        //   <li>{category}</li>
+        // </div>
+        <GiftGrid key={category} category={category} />
+      ))}
     </>
   );
 };
