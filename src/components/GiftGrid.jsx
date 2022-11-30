@@ -1,11 +1,12 @@
+import { getGifts } from "../helpers/getGifts";
 
 
-export const GiftGrid = ({category}) => {
+export const GiftGrid = ({ category }) => {
+  getGifts(category);
   return (
     <>
-    <h3>{category}</h3>
-    <p>hola mundo</p>
-    
+      <h3>{category}</h3>
+      <p>hola mundo</p>
     </>
-  )
-}
+  );
+};
