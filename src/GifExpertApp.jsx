@@ -9,7 +9,7 @@ export const GifExpertApp = () => {
     if (categories.includes(newCategory)) {
       return;
     }
-    console.log(newCategory);
+    //console.log(newCategory);
     // categories.push("gate");
     setCategories([newCategory, ...categories]);
     //setCategories(cat =>[...categories, "Gate"]);
